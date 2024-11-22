@@ -36,6 +36,7 @@ body {
 }
 
 .bg {
+    width: 100vw;
     max-width: 600px;
     background: #f9f3e3 url("img/ohtuleht-taust-1000x2000px.png") no-repeat center;
     background-size: auto;
