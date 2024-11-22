@@ -26,7 +26,7 @@
     font-style: normal;
 }
 
-html, body {
+html, body, label, input, button {
     padding: 0;
     margin: 0;
 }
@@ -44,4 +44,58 @@ body {
     background: #f9f3e3 url("img/ohtuleht-taust-1000x2000px.png") no-repeat center;
     background-size: contain;
     aspect-ratio: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name-input-container {
+    display: flex; /* Flexbox for centering content */
+    flex-direction: column; /* Stack label, input, and button vertically */
+    align-items: center; /* Center elements horizontally */
+}
+
+label, input, button {
+    font-family: "FiraSans", sans-serif;
+    font-weight: 400;
+    font-size: 5vw;
+    text-align: center;
+}
+
+input, input:active, button {
+    padding: 3vw 8vw;
+    margin: 4vw 0;
+    border: 0.6vw solid black;
+    border-radius: 4vw;
+    background: none;
+    outline: none;
+}
+
+label {
+    margin: 3vw 0;
+}
+
+button:hover {
+
+}
+
+.hidden {
+    display: none;
+}
+
+@media (min-width: 600px) {
+    label, input, button {
+        font-size: 30px;
+    }
+
+    input, button {
+        padding: 18px 48px;
+        margin: 24px 0;
+        border: 3px solid black;
+        border-radius: 24px;
+    }
+
+    label {
+        margin: 18px 0;
+    }
 }
