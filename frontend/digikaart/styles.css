@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: #f9f3e3;
+}
+
+.card-container {
+    position: relative;
+    width: 100vw;
+    max-width: 600px;
+}
+
+.card-container img {
+    width: 100%;
+    height: auto;
+}
+
+.input-field {
+    position: absolute;
+    top: 29%;
+    left: 12%;
+    width: 74%;
+    height: 20%;
+    font-family: "Arial", sans-serif;
+    font-size: 3.5vw;
+    text-align: left;
+    background: none;
+    border: none;
+    outline: none;
+    resize: none;
+    line-height: 2.95;
+}
+
+.submit-button {
+    position: absolute;
+    bottom: 27%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2.5vw 4vw;
+    font-size: 3.5vw;
+    font-family: "Arial", sans-serif;
+    background: none;
+    color: black;
+    border: solid 0.4vw black;
+    border-radius: 3vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    color: #e2050d;
+    border: solid 0.4vw #e2050d;
+}
+
+.hidden {
+    display: none; /* Hides elements */
+}
+
+@media (min-width: 600px) {
+    .input-field {
+        font-size: 21px;
+    }
+
+    .submit-button {
+        font-size: 21px;
+        padding: 15px 24px;
+        border: solid 2px black;
+        border-radius: 18px;
+    }
+
+    .submit-button:hover {
+        border: solid 2px #e2050d;
+    }
+}
