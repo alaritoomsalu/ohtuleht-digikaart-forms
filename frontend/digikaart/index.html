@@ -9,16 +9,21 @@
 <body>
 <div class="bg">
     <!-- Name Input Section -->
-    <div class="name-input-container">
+    <div class="name-input-container hidden">
         <label for="name">Palun sisestage oma eesnimi:</label>
         <input type="text" id="name" placeholder="Nimi" required />
         <button onclick="startCard()">Edasi</button>
     </div>
     <!-- First Card Container -->
-    <div class="card-container first-card hidden">
-        <h1 id="partner-name"></h1>
-        <textarea class="wish-input-field" rows="3" placeholder="Kirjuta oma soov siia..."></textarea>
-        <button class="submit-button" onclick="sendWish()">Saada soov</button>
+    <div class="card-container first-card">
+        <h1 id="partner-name">Hea sõber!</h1>
+        <div class="content-container">
+            <p class="body-text">Kirjuta siia enda kõige<br>südamelähedasem jõulusoov.</p>
+            <textarea class="wish-input-field" rows="3" placeholder="Kirjuta oma soov siia..."></textarea>
+            <p class="body-text">Me usume, et soov täitub,<br>sest kirjasõnal on jõud.</p>
+            <h2>Südamlikke jõule!</h2>
+            <button class="submit-button" onclick="sendWish()">Kinnita soov</button>
+        </div>
     </div>
     <!-- Second Card Container -->
     <div class="card-container second-card hidden">
