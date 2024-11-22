@@ -58,14 +58,14 @@ body {
 label, input, button {
     font-family: "FiraSans", sans-serif;
     font-weight: 400;
-    font-size: 5vw;
+    font-size: 4vw;
     text-align: center;
 }
 
 input, input:active, button {
     padding: 3vw 8vw;
     margin: 4vw 0;
-    border: 0.6vw solid black;
+    border: 0.5vw solid black;
     border-radius: 4vw;
     background: none;
     outline: none;
@@ -76,7 +76,8 @@ label {
 }
 
 button:hover {
-
+    border: 0.5vw solid #e2050d;
+    color: #e2050d;
 }
 
 .hidden {
@@ -85,13 +86,13 @@ button:hover {
 
 @media (min-width: 600px) {
     label, input, button {
-        font-size: 30px;
+        font-size: 24px;
     }
 
-    input, button {
+    input, input:active, button, button:hover {
         padding: 18px 48px;
         margin: 24px 0;
-        border: 3px solid black;
+        border: 3px solid;
         border-radius: 24px;
     }
 
