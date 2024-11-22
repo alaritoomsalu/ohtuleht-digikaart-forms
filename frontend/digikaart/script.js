@@ -1,15 +1,24 @@
-// Select the audio element and textarea
-const audio = document.getElementById("background-music");
-const textarea = document.querySelector(".input-field");
+let userName = "";
 
-// Play music when the textarea is clicked or focused
-textarea.addEventListener("click", () => {
-    if (audio.paused) {
-        audio.play().catch((err) => {
-            console.error("Error playing audio:", err);
-        });
+// Function to handle the name entry and show the card
+function startCard() {
+    const nameInput = document.getElementById("name").value;
+    if (!nameInput.trim()) {
+        alert("Palun sisesta oma nimi!");
+        return;
     }
-});
+
+    // Play the background music
+    const music = document.getElementById("background-music");
+    music.play().catch(error => console.error("Music playback failed:", error));
+
+    userName = nameInput;
+    document.querySelector(".name-input-container").classList.add("hidden");
+    document.querySelector(".first-card").classList.remove("hidden");
+
+    // Set the name in the first card
+    document.getElementById("partner-name").textContent = "Hea " + userName + "!";
+}
 
 async function sendWish() {
     // Get the value from the textarea
@@ -25,7 +34,7 @@ async function sendWish() {
 
     try {
         // Replace with your Google Form's action URL and field name
-        const googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSfzYImbXeqRSlVG4dbiFI6x0LhnDx5HK50F3ZEPAVcJYmPCEg/formResponse";
+        const googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLScM2rLGlS38VmuYBa6TmESy7NxFPA9cHeE-TYKh3WPCdJLJtQ/formResponse";
         const formFieldName = "entry.1113432211";
 
         // Create form data

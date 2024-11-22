@@ -7,9 +7,18 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<!-- Name Input Section -->
+<div class="name-input-container">
+    <img src="img/ohtuleht-taust-1000x2000px.png" alt="digikaart nime sisestus">
+    <label for="name">Palun sisestage oma eesnimi:</label>
+    <input type="text" id="name" placeholder="Nimi" required />
+    <button onclick="startCard()">Edasi</button>
+</div>
+
 <!-- First Card Container -->
-<div class="card-container first-card">
+<div class="card-container first-card hidden">
     <img src="img/kaardi_kavand.png" alt="digikaart esimene vaade">
+    <h1 id="partner-name"></h1>
     <textarea class="input-field" rows="3" placeholder="Kirjuta oma soov siia..."></textarea>
     <button class="submit-button" onclick="sendWish()">Saada soov</button>
 </div>

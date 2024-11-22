@@ -1,3 +1,31 @@
+@font-face {
+    font-family: "FiraSans";
+    src: url("fonts/FiraSans-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "FiraSans";
+    src: url("fonts/FiraSans-Bold.ttf");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "FiraSans";
+    src: url("fonts/FiraSans-Light.ttf");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ReenieBeanie";
+    src: url("fonts/ReenieBeanie-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     margin: 0;
     display: flex;
@@ -5,6 +33,17 @@ body {
     align-items: center;
     height: 100%;
     background: #f9f3e3;
+}
+
+h1 {
+    font-family: "ReenieBeanie", sans-serif;
+    font-weight: normal;
+    font-size: 12vw;
+    text-align: center;
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .card-container {
@@ -19,12 +58,13 @@ body {
 }
 
 .input-field {
+    font-family: "FiraSans", sans-serif;
+    font-weight: 400;
     position: absolute;
     top: 29%;
     left: 12%;
     width: 74%;
     height: 20%;
-    font-family: "Arial", sans-serif;
     font-size: 3.5vw;
     text-align: left;
     background: none;
@@ -35,13 +75,14 @@ body {
 }
 
 .submit-button {
+    font-family: "FiraSans", sans-serif;
+    font-weight: 400;
     position: absolute;
     bottom: 27%;
     left: 50%;
     transform: translateX(-50%);
     padding: 2.5vw 4vw;
     font-size: 3.5vw;
-    font-family: "Arial", sans-serif;
     background: none;
     color: black;
     border: solid 0.4vw black;
@@ -55,11 +96,74 @@ body {
     border: solid 0.4vw #e2050d;
 }
 
+.name-input-container {
+    position: relative;
+    width: 100vw;
+    max-width: 600px;
+}
+
+.name-input-container img {
+    width: 100%;
+    height: auto;
+}
+
+.name-input-container label {
+    font-family: "FiraSans", sans-serif;
+    font-weight: 400;
+    position: absolute;
+    top: 29%;
+    left: 30%;
+    transform: translateX(-13%);
+    font-size: 4vw;
+    text-align: center;
+}
+
+.name-input-container input {
+    font-family: "FiraSans", sans-serif;
+    font-weight: 400;
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4vw;
+    text-align: center;
+    border: solid 0.4vw black;
+    border-radius: 3vw;
+    background: none;
+    padding: 1vw;
+}
+
+.name-input-container button {
+    font-family: "FiraSans", sans-serif;
+    font-weight: 400;
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2.5vw 4vw;
+    font-size: 3.5vw;
+    background: none;
+    color: black;
+    border: solid 0.4vw black;
+    border-radius: 3vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.name-input-container button:hover {
+    color: #e2050d;
+    border: 2px solid #e2050d;
+}
+
 .hidden {
     display: none; /* Hides elements */
 }
 
 @media (min-width: 600px) {
+    h1 {
+        font-size: 72px;
+    }
+
     .input-field {
         font-size: 21px;
     }
@@ -73,5 +177,23 @@ body {
 
     .submit-button:hover {
         border: solid 2px #e2050d;
+    }
+
+    .name-input-container label {
+        font-size: 24px;
+    }
+
+    .name-input-container input {
+        font-size: 21px;
+        padding: 6px;
+        border: solid 2px black;
+        border-radius: 18px;
+    }
+
+    .name-input-container button {
+        font-size: 21px;
+        padding: 15px 24px;
+        border: solid 2px black;
+        border-radius: 18px;
     }
 }
