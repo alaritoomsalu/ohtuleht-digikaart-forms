@@ -46,13 +46,14 @@ body {
     aspect-ratio: 1 / 2;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .name-input-container {
     display: flex; /* Flexbox for centering content */
     flex-direction: column; /* Stack label, input, and button vertically */
     align-items: center; /* Center elements horizontally */
+    margin-top: 30vw;
 }
 
 label, input, button {
@@ -66,7 +67,7 @@ input, input:active, button {
     padding: 3vw 8vw;
     margin: 4vw 0;
     border: 0.5vw solid black;
-    border-radius: 4vw;
+    border-radius: 5vw;
     background: none;
     outline: none;
 }
@@ -85,6 +86,10 @@ button:hover {
 }
 
 @media (min-width: 600px) {
+    .name-input-container {
+        margin-top: 180px;
+    }
+
     label, input, button {
         font-size: 24px;
     }
@@ -92,8 +97,8 @@ button:hover {
     input, input:active, button, button:hover {
         padding: 18px 48px;
         margin: 24px 0;
-        border: 3px solid;
-        border-radius: 24px;
+        border: 2px solid;
+        border-radius: 30px;
     }
 
     label {
