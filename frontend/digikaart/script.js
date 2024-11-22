@@ -1,6 +1,15 @@
-// Play the background music
-const music = document.getElementById("background-music");
-music.play().catch(error => console.error("Music playback failed:", error));
+// Select the audio element and textarea
+const audio = document.getElementById("background-music");
+const textarea = document.querySelector(".input-field");
+
+// Play music when the textarea is clicked or focused
+textarea.addEventListener("click", () => {
+    if (audio.paused) {
+        audio.play().catch((err) => {
+            console.error("Error playing audio:", err);
+        });
+    }
+});
 
 async function sendWish() {
     // Get the value from the textarea
