@@ -1,3 +1,7 @@
+// Play the background music
+const music = document.getElementById("background-music");
+music.play().catch(error => console.error("Music playback failed:", error));
+
 async function sendWish() {
     // Get the value from the textarea
     const wish = document.querySelector(".input-field").value;
