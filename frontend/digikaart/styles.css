@@ -32,12 +32,16 @@ html, body {
 }
 
 body {
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bg {
-    width: 100vw;
+    width: 100%;
     max-width: 600px;
+    height: auto;
     background: #f9f3e3 url("img/ohtuleht-taust-1000x2000px.png") no-repeat center;
-    background-size: auto;
+    background-size: contain;
+    aspect-ratio: 1 / 2;
 }
