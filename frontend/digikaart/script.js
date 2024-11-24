@@ -51,7 +51,7 @@ async function sendWish() {
         // Clear textarea and switch cards
         document.querySelector(".wish-input-field").value = "";
         document.querySelector(".first-card").classList.add("hidden");
-        document.querySelector(".second-card").classList.remove("hidden");
+        document.querySelector(".end-card").classList.remove("hidden");
 
     } catch (error) {
         console.error("Viga soovi saatmisel:", error);
