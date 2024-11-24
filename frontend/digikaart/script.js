@@ -2,13 +2,17 @@ let userName = "";
 
 // Function to handle the name entry and show the card
 function startCard() {
-    const nameInput = document.getElementById("name").value;
+    const nameInput = document.getElementById("name").value.trim();
 
     // Play the background music
     const music = document.getElementById("background-music");
     music.play().catch(error => console.error("Music playback failed:", error));
 
-    userName = nameInput;
+    if (nameInput === "") {
+        userName = "Sõber"
+    } else {
+        userName = nameInput;
+    }
     document.querySelector(".name-input-container").classList.add("hidden");
     document.querySelector(".first-card").classList.remove("hidden");
 
@@ -18,7 +22,7 @@ function startCard() {
 
 async function sendWish() {
     // Get the value from the textarea
-    const wish = document.querySelector(".input-field").value;
+    const wish = document.querySelector(".wish-input-field").value;
 
     // Check if the user entered a wish
     if (!wish.trim()) {
@@ -45,7 +49,7 @@ async function sendWish() {
         });
 
         // Clear textarea and switch cards
-        document.querySelector(".input-field").value = "";
+        document.querySelector(".wish-input-field").value = "";
         document.querySelector(".first-card").classList.add("hidden");
         document.querySelector(".second-card").classList.remove("hidden");
 
