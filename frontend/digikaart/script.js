@@ -3,10 +3,6 @@ let userName = "";
 // Function to handle the name entry and show the card
 function startCard() {
     const nameInput = document.getElementById("name").value;
-    if (!nameInput.trim()) {
-        alert("Palun sisesta oma nimi!");
-        return;
-    }
 
     // Play the background music
     const music = document.getElementById("background-music");
