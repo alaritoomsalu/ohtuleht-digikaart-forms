@@ -9,26 +9,24 @@
 <body>
 <div class="bg">
     <!-- Name Input Section -->
-    <div class="name-input-container hidden">
-        <label for="name">Palun sisestage oma eesnimi:</label>
+    <div class="name-input-container">
+        <label for="name">Palun sisesta oma eesnimi:</label>
         <input type="text" id="name" placeholder="Nimi" required />
         <button onclick="startCard()">Edasi</button>
     </div>
     <!-- First Card Container -->
-    <div class="card-container first-card">
+    <div class="card-container first-card hidden">
         <h1 id="partner-name">Hea sõber!</h1>
         <div class="content-container">
             <p class="body-text">Kirjuta siia enda kõige<br>südamelähedasem jõulusoov.</p>
-            <textarea class="wish-input-field" rows="3" placeholder="Kirjuta oma soov siia..."></textarea>
+            <textarea class="wish-input-field" rows="5" placeholder="Kirjuta oma soov siia..."></textarea>
             <p class="body-text">Me usume, et soov täitub,<br>sest kirjasõnal on jõud.</p>
             <h2>Südamlikke jõule!</h2>
         </div>
         <button class="submit-button" onclick="sendWish()">Kinnita soov</button>
         <img id="logo" src="assets/ohtuleht-logo.svg" alt="Õhtuleht logo">
         <div class="footer-container">
-            <p class="footer-text">Juba</p>
-            <img id="80-logo" src="assets/80-logo.svg" alt="Õhtuleht 80 logo">
-            <p class="footer-text">aastat</p>
+            <p class="footer-text">Juba <span><img id="80-logo" src="assets/80-logo.svg" alt="Õhtuleht 80 logo"></span> aastat</p>
         </div>
         <p class="footer-text">südamega asja juures!</p>
 
