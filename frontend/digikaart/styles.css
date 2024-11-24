@@ -32,16 +32,54 @@ html, body, div, label, input, button, h1, h2, p, textarea {
 }
 
 body {
+    font-family: "FiraSans", sans-serif;
+    font-weight: 400;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+h1, h2 {
+    font-family: "ReenieBeanie", sans-serif;
+    font-weight: normal;
+    font-size: 12vw;
+    margin: 22vw 0 13vw 0;
+}
+
+h2 {
+    font-size: 8vw;
+    margin: 10vw 0 6vw 13vw;
+}
+
+.body-text {
+    font-size: 4vw;
+    margin-left: 13vw;
+}
+
+.footer-text {
+    font-size: 3.5vw;
+}
+
+textarea {
+    font-size: 4vw;
+    line-height: 10.5vw;
+    margin-left: 13vw;
+    margin-bottom: 10vw;
+    width: 74%;
+    background: none;
+    outline: none;
+}
+
+#logo {
+    width: 28vw;
+    margin: 6.5vw 0 9vw 0;
 }
 
 .bg {
     width: 100%;
     max-width: 600px;
     height: auto;
-    background: #f9f3e3 url("img/ohtuleht-taust-1000x2000px.png") no-repeat center;
+    background: #f9f3e3 url("img/taust-ref.png") no-repeat center;
     background-size: contain;
     aspect-ratio: 1 / 2;
     display: flex;
@@ -57,8 +95,6 @@ body {
 }
 
 label, input, button {
-    font-family: "FiraSans", sans-serif;
-    font-weight: 400;
     font-size: 4vw;
     text-align: center;
 }
@@ -79,6 +115,28 @@ label {
 button:hover {
     border: 0.5vw solid #e2050d;
     color: #e2050d;
+}
+
+.card-container {
+    display: flex; /* Flexbox for centering content */
+    flex-direction: column; /* Stack label, input, and button vertically */
+    align-items: center; /* Center elements horizontally */
+    width: 100%;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    width: 100%; /* Ensure it spans the full width of the container */
+}
+
+.footer-container {
+    display: flex;
+}
+
+#80-logo {
+    width: 6vw;
 }
 
 .hidden {
